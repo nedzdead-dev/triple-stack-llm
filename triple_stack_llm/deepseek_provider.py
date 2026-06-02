@@ -8,7 +8,7 @@ import logging
 
 from .config import Config
 
-log = logging.getLogger("tierllm.deepseek")
+log = logging.getLogger("triple_stack_llm.deepseek")
 
 _usage = {"calls": 0, "in_tok": 0, "out_tok": 0, "errors": 0, "cost": 0.0}
 

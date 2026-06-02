@@ -1,5 +1,5 @@
-tierllm
-Copyright (c) 2026 tierllm contributors
+Triple Stack LLM
+Copyright (c) 2026 triple-stack-llm contributors
 Licensed under the MIT License (see LICENSE).
 
 This project is a routing layer that orchestrates third-party models and
@@ -25,5 +25,5 @@ PREMIUM (Tier 3)
   Anthropic Claude + anthropic SDK — https://www.anthropic.com
 
 All trademarks, model names, and APIs are the property of their respective
-owners. tierllm is an independent, unaffiliated project. Users must comply with
+owners. triple-stack-llm is an independent, unaffiliated project. Users must comply with
 each provider's terms of service and pricing.

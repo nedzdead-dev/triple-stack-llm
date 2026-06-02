@@ -1,14 +1,14 @@
 """Tier 3 — Anthropic Claude. The premium tier / safety net.
 
 Used only when the cheaper tiers can't (or for tasks you explicitly route here).
-Requires the `anthropic` SDK:  pip install "tierllm[claude]"
+Requires the `anthropic` SDK:  pip install "triple_stack_llm[claude]"
 """
 import time
 import logging
 
 from .config import Config
 
-log = logging.getLogger("tierllm.claude")
+log = logging.getLogger("triple_stack_llm.claude")
 
 _usage = {"calls": 0, "in_tok": 0, "out_tok": 0, "errors": 0, "cost": 0.0}
 _client = None

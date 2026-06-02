@@ -1,4 +1,4 @@
-# tierllm
+# Triple Stack LLM
 
 **Route each task to the cheapest LLM tier that can actually do it.**
 
@@ -10,7 +10,7 @@
 
 A small **3-tier router** that tries the cheapest model first, validates the output
 with a deterministic **quality gate**, and transparently **escalates** to a stronger
-tier only when needed. In production this routinely cuts LLM spend **~90%** versus
+tier only when needed. In production this routinely cuts LLM spend **90%+ (up to ~99%)** versus
 sending everything to a premium model — without sacrificing quality, because anything
 the cheap tier can't do falls through to the one that can.
 
@@ -25,10 +25,10 @@ Every tier is **optional** — missing a key or dependency just skips that tier.
 ## Install
 
 ```bash
-pip install tierllm                 # core (DeepSeek + Claude tiers, requests-only)
-pip install "tierllm[local]"        # + local on-device tier (Apple Silicon / MLX)
-pip install "tierllm[claude]"       # + Anthropic SDK for the Claude tier
-pip install "tierllm[all]"
+pip install triple-stack-llm                 # core (DeepSeek + Claude tiers, requests-only)
+pip install "triple-stack-llm[local]"        # + local on-device tier (Apple Silicon / MLX)
+pip install "triple-stack-llm[claude]"       # + Anthropic SDK for the Claude tier
+pip install "triple-stack-llm[all]"
 ```
 
 ## Configure (all via env — no secrets in code)
@@ -43,7 +43,7 @@ export ANTHROPIC_API_KEY=sk-ant-...   # tier 3 (optional)
 ## Use
 
 ```python
-from tierllm import TierRouter
+from triple_stack_llm import TierRouter
 
 r = TierRouter()
 
@@ -99,7 +99,7 @@ you get cheap-tier economics with premium-tier correctness. Match the model to t
 
 ## Acknowledgments & credits
 
-`tierllm` is glue around excellent work by others. Full credit to:
+Triple Stack LLM is glue around excellent work by others. Full credit to:
 
 **The idea — LLM cascades / tiered routing**
 - **FrugalGPT** — Chen, Zaharia & Zou (2023), *"FrugalGPT: How to Use Large Language Models While Reducing Cost and Improving Performance"* — the foundational work on cascading from cheap to expensive models. [arXiv:2305.05176](https://arxiv.org/abs/2305.05176)
@@ -116,7 +116,7 @@ you get cheap-tier economics with premium-tier correctness. Match the model to t
 **Tier 3 — premium**
 - **Anthropic Claude** and the `anthropic` Python SDK. [anthropic.com](https://www.anthropic.com)
 
-All trademarks and models belong to their respective owners. `tierllm` is an independent
+All trademarks and models belong to their respective owners. Triple Stack LLM is an independent
 project and is not affiliated with or endorsed by Apple, Alibaba, DeepSeek, or Anthropic.
 You are responsible for complying with each provider's terms of service and pricing.
 

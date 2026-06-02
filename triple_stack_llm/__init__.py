@@ -1,9 +1,9 @@
-"""tierllm — route each task to the cheapest capable LLM tier.
+"""triple_stack_llm — route each task to the cheapest capable LLM tier.
 
     local (on-device SLM, $0) -> deepseek (cheap cloud) -> claude (premium)
 
 Quick start:
-    from tierllm import TierRouter
+    from triple_stack_llm import TierRouter
     r = TierRouter()
     res = r.complete("Say hi in 3 words", tier="deepseek")
     print(res.text, res.tier)

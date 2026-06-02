@@ -12,7 +12,7 @@ import logging
 from . import local_engine, deepseek_provider, claude_provider
 from . import gates as _gates
 
-log = logging.getLogger("tierllm.router")
+log = logging.getLogger("triple_stack_llm.router")
 
 # Ordered escalation chain. Starting at tier X tries X, then everything after it.
 _CHAIN = ["local", "deepseek", "claude"]

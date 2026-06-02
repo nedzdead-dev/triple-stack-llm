@@ -1,10 +1,10 @@
-"""tierllm quickstart — run:  python examples/quickstart.py
+"""triple_stack_llm quickstart — run:  python examples/quickstart.py
 
 Set DEEPSEEK_API_KEY (and optionally ANTHROPIC_API_KEY) first, and/or install the
-local tier with: pip install "tierllm[local]" on Apple Silicon.
+local tier with: pip install "triple_stack_llm[local]" on Apple Silicon.
 """
 import logging
-from tierllm import TierRouter
+from triple_stack_llm import TierRouter
 
 logging.basicConfig(level=logging.INFO, format="%(name)s: %(message)s")
 

@@ -4,8 +4,8 @@ import os
 
 class Config:
     # ---- Tier 1: local SLM (MLX / Qwen-class) ----
-    LOCAL_MODEL = os.getenv("TIERLLM_LOCAL_MODEL", "mlx-community/Qwen3.5-2B-4bit")
-    LOCAL_ENABLED = os.getenv("TIERLLM_LOCAL", "1") == "1"
+    LOCAL_MODEL = os.getenv("TRIPLESTACK_LOCAL_MODEL", "mlx-community/Qwen3.5-2B-4bit")
+    LOCAL_ENABLED = os.getenv("TRIPLESTACK_LOCAL", "1") == "1"
 
     # ---- Tier 2: cheap cloud (DeepSeek, OpenAI-compatible) ----
     DEEPSEEK_KEY = os.getenv("DEEPSEEK_API_KEY", "")
@@ -17,9 +17,9 @@ class Config:
     CLAUDE_MODEL = os.getenv("CLAUDE_MODEL", "claude-haiku-4-5-20251001")
 
     # ---- behaviour ----
-    LOCAL_MAX_RETRIES = int(os.getenv("TIERLLM_LOCAL_RETRIES", "1"))
-    REQUEST_TIMEOUT = float(os.getenv("TIERLLM_TIMEOUT", "60"))
-    CLOUD_RETRIES = int(os.getenv("TIERLLM_CLOUD_RETRIES", "3"))
+    LOCAL_MAX_RETRIES = int(os.getenv("TRIPLESTACK_LOCAL_RETRIES", "1"))
+    REQUEST_TIMEOUT = float(os.getenv("TRIPLESTACK_TIMEOUT", "60"))
+    CLOUD_RETRIES = int(os.getenv("TRIPLESTACK_CLOUD_RETRIES", "3"))
 
     # ---- pricing ($/token, override to match current rates) ----
     PRICE_DEEPSEEK_IN = float(os.getenv("PRICE_DEEPSEEK_IN", "0.27e-6"))

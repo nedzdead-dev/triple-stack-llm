@@ -4,14 +4,14 @@ Runs entirely on-device at $0. Thread-safe lazy singleton. Degrades gracefully:
 if `mlx-lm` isn't installed or the model can't load, is_available() returns False
 and the router simply skips this tier.
 
-Install the optional dependency to enable:  pip install "tierllm[local]"
+Install the optional dependency to enable:  pip install "triple_stack_llm[local]"
 """
 import logging
 import threading
 
 from .config import Config
 
-log = logging.getLogger("tierllm.local")
+log = logging.getLogger("triple_stack_llm.local")
 
 _available = None
 _avail_lock = threading.Lock()
