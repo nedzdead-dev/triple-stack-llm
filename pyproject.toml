@@ -18,8 +18,8 @@ claude = ["anthropic>=0.40"]
 all = ["mlx-lm>=0.20", "anthropic>=0.40"]
 
 [project.urls]
-Homepage = "https://github.com/REPLACE_ME/tierllm"
-Issues = "https://github.com/REPLACE_ME/tierllm/issues"
+Homepage = "https://github.com/nedzdead-dev/tierllm"
+Issues = "https://github.com/nedzdead-dev/tierllm/issues"
 
 [tool.setuptools.packages.find]
 include = ["tierllm*"]
