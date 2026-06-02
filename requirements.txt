@@ -1,0 +1,4 @@
+requests>=2.28
+# optional tiers (install via extras instead, see pyproject.toml):
+#   local tier  -> mlx-lm        ("tierllm[local]", Apple Silicon)
+#   claude tier -> anthropic     ("tierllm[claude]")

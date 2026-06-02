@@ -1,0 +1,25 @@
+[build-system]
+requires = ["setuptools>=64"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "tierllm"
+version = "0.1.0"
+description = "Route each task to the cheapest LLM tier that can do it: local SLM -> DeepSeek -> Claude."
+readme = "README.md"
+requires-python = ">=3.9"
+license = { text = "MIT" }
+keywords = ["llm", "router", "deepseek", "claude", "qwen", "mlx", "cost-optimization", "local-llm"]
+dependencies = ["requests>=2.28"]
+
+[project.optional-dependencies]
+local = ["mlx-lm>=0.20"]
+claude = ["anthropic>=0.40"]
+all = ["mlx-lm>=0.20", "anthropic>=0.40"]
+
+[project.urls]
+Homepage = "https://github.com/REPLACE_ME/tierllm"
+Issues = "https://github.com/REPLACE_ME/tierllm/issues"
+
+[tool.setuptools.packages.find]
+include = ["tierllm*"]
