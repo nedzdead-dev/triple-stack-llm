@@ -97,5 +97,30 @@ A small model is reliable on tasks where the answer is *in the text* or *clear-c
 but fails on judgment/knowledge. The **gate** catches those failures and escalates — so
 you get cheap-tier economics with premium-tier correctness. Match the model to the task.
 
+## Acknowledgments & credits
+
+`tierllm` is glue around excellent work by others. Full credit to:
+
+**The idea — LLM cascades / tiered routing**
+- **FrugalGPT** — Chen, Zaharia & Zou (2023), *"FrugalGPT: How to Use Large Language Models While Reducing Cost and Improving Performance"* — the foundational work on cascading from cheap to expensive models. [arXiv:2305.05176](https://arxiv.org/abs/2305.05176)
+
+**Tier 1 — local inference**
+- **Apple MLX** — the on-device array/ML framework. [github.com/ml-explore/mlx](https://github.com/ml-explore/mlx)
+- **mlx-lm** — LLM runners for MLX. [github.com/ml-explore/mlx-lm](https://github.com/ml-explore/mlx-lm)
+- **Qwen** (Alibaba) — the default local model family. [github.com/QwenLM](https://github.com/QwenLM)
+- **mlx-community** — community MLX model conversions on Hugging Face. [huggingface.co/mlx-community](https://huggingface.co/mlx-community)
+
+**Tier 2 — cheap cloud**
+- **DeepSeek** — DeepSeek-V3 and the OpenAI-compatible API. [github.com/deepseek-ai](https://github.com/deepseek-ai) · [deepseek.com](https://www.deepseek.com)
+
+**Tier 3 — premium**
+- **Anthropic Claude** and the `anthropic` Python SDK. [anthropic.com](https://www.anthropic.com)
+
+All trademarks and models belong to their respective owners. `tierllm` is an independent
+project and is not affiliated with or endorsed by Apple, Alibaba, DeepSeek, or Anthropic.
+You are responsible for complying with each provider's terms of service and pricing.
+
+See [NOTICE](NOTICE) for the full attribution list.
+
 ## License
 MIT — see [LICENSE](LICENSE).

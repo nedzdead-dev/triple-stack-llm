@@ -1,0 +1,29 @@
+tierllm
+Copyright (c) 2026 tierllm contributors
+Licensed under the MIT License (see LICENSE).
+
+This project is a routing layer that orchestrates third-party models and
+frameworks. It does not include or redistribute their code or weights. Full
+credit and thanks to the projects it builds on:
+
+CONCEPT / PRIOR ART
+  FrugalGPT: How to Use Large Language Models While Reducing Cost and Improving
+  Performance — Lingjiao Chen, Matei Zaharia, James Zou (2023).
+  https://arxiv.org/abs/2305.05176
+  The cascade-from-cheap-to-expensive idea originates here.
+
+LOCAL INFERENCE (Tier 1)
+  Apple MLX            — https://github.com/ml-explore/mlx            (MIT)
+  mlx-lm               — https://github.com/ml-explore/mlx-lm         (MIT)
+  Qwen (Alibaba Cloud) — https://github.com/QwenLM                    (see model licenses)
+  mlx-community        — https://huggingface.co/mlx-community
+
+CHEAP CLOUD (Tier 2)
+  DeepSeek             — https://github.com/deepseek-ai · https://www.deepseek.com
+
+PREMIUM (Tier 3)
+  Anthropic Claude + anthropic SDK — https://www.anthropic.com
+
+All trademarks, model names, and APIs are the property of their respective
+owners. tierllm is an independent, unaffiliated project. Users must comply with
+each provider's terms of service and pricing.
